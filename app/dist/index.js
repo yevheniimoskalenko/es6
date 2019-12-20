@@ -1,27 +1,47 @@
 "use strict";
 
-var names = ["Yevhenii", "Vika", "Den", "Vadim"];
-var _iteratorNormalCompletion = true;
-var _didIteratorError = false;
-var _iteratorError = undefined;
+// // const names = ["Yevhenii", "Vika", "Den", "Vadim"];
+// // for (let name of names) {
+// //   console.log(name);
+// // }
+// // Object
 
-try {
-  for (var _iterator = names[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-    var name = _step.value;
+// let name = "jeck";
+// let sex = "male";
+// let age = 20;
 
-    console.log(name);
+// var person = {
+//   name,
+//   sex,
+//   age,
+//   greet() {
+//     console.log(`Hello ${this.name}`);
+//   }
+//   // get:password(){
+//   // 	return this.name + this.age
+//   // }
+// };
+
+// person.name;
+// person["name"];
+// let firstname = "name";
+// person[firstname];
+
+// person.greet;
+// // person = {
+// //   [firstname]: "max"
+// // };
+// console.log(person);
+
+var promise = new Promise(function (resolve, reject) {
+  if (true) {
+    resolve("promise complite");
+  } else {
+    reject("some error");
   }
-} catch (err) {
-  _didIteratorError = true;
-  _iteratorError = err;
-} finally {
-  try {
-    if (!_iteratorNormalCompletion && _iterator.return) {
-      _iterator.return();
-    }
-  } finally {
-    if (_didIteratorError) {
-      throw _iteratorError;
-    }
-  }
-}
+});
+promise.then(function (res) {
+  return console.log(res);
+}).catch(function (res) {
+  return console.log(res);
+});
