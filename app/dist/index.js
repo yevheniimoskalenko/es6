@@ -33,15 +33,15 @@
 // // };
 // console.log(person);
 
-var promise = new Promise(function (resolve, reject) {
-  if (true) {
-    resolve("promise complite");
-  } else {
-    reject("some error");
-  }
-});
-promise.then(function (res) {
-  return console.log(res);
-}).catch(function (res) {
-  return console.log(res);
+// const promise = new Promise((resolve, reject) => {
+//   if (true) {
+//     resolve("promise complite");
+//   } else {
+//     reject("some error");
+//   }
+// });
+// promise.then(res => console.log(res)).catch(res => console.log(res));
+var arr = ["Apple", "Orenge", "peare"];
+arr.forEach(function (result) {
+  console.log(result.length);
 });

@@ -31,11 +31,15 @@
 // // };
 // console.log(person);
 
-const promise = new Promise((resolve, reject) => {
-  if (true) {
-    resolve("promise complite");
-  } else {
-    reject("some error");
-  }
+// const promise = new Promise((resolve, reject) => {
+//   if (true) {
+//     resolve("promise complite");
+//   } else {
+//     reject("some error");
+//   }
+// });
+// promise.then(res => console.log(res)).catch(res => console.log(res));
+const arr = ["Apple", "Orenge", "peare"];
+arr.forEach(result => {
+  console.log(result.length);
 });
-promise.then(res => console.log(res)).catch(res => console.log(res));
