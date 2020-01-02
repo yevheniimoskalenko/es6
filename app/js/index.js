@@ -39,16 +39,42 @@
 //   }
 // });
 // promise.then(res => console.log(res)).catch(res => console.log(res));
-const arr = ["Apple", "Orenge", "peare"];
+// const arr = ["Apple", "Orenge", "peare"];
 const arrs = [1, -3, 5, -2, 10];
-arr.forEach(res => {
-  console.log(res);
-});
-const newarr = arr.map(res => {
-  return res.length;
-});
-console.log(newarr);
-const newars = arrs.filter(res => {
-  return res > 0;
-});
-console.log(newars);
+const number = [1, 2, 3, 4, 5];
+// arr.forEach(res => {
+//   console.log(res);
+// });
+// const newarr = arr.map(res => {
+//   return res.length;
+// });
+// // console.log(newarr);
+// const newars = arrs.filter(res => {
+//   return res > 0;
+// });
+// console.log(newars);
+
+// const result = number.reduce((previousValue, currentItem, index, rs) => {
+//   let res = previousValue + currentItem;
+//   return `${res} ${index} ${rs}`;
+// });
+// console.log(result);
+// Код ниже получает из массива строк новый массив, содержащий их длины:
+// const arr = ["Есть", "жизнь", "на", "Марсе"];
+
+// const result = arr.map(res => {
+//   return res.length;
+// });
+// let r = arr.forEach(res => {
+//   console.log(res.length);
+// });
+// for (let r of arr) console.log(r.length);
+// for (let r in arr) console.log(r);
+const arr = [1, 2, 3, 4, 5];
+function getSums(...arr) {
+  const res = arr.reduce((prev, curr) => {
+    return prev + curr;
+  });
+  return res;
+}
+console.log(getSums(1, 2, 3, 4, 5));
