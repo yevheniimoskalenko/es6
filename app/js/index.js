@@ -83,3 +83,5 @@ console.log("awesome undeground awa9".match(rx1));
 
 const rx2 = /[a-z]+a[a-z]+/g;
 console.log("A man can die but once".match(rx2));
+const email = /[a-z0-9]+@([a-z]+[^0-9])\.[a-z]+/g;
+console.log("test@ru.co testjoker@gmail.com test@3ru.co".match(email));
