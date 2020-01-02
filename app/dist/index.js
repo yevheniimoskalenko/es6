@@ -80,10 +80,13 @@ var number = [1, 2, 3, 4, 5];
 //   return res;
 // }
 // console.log(getSums(1, 2, 3, 4, 5));
-var rx1 = /[a-z]+a[0-9]/g;
-console.log("awesome undeground awa9".match(rx1));
+// const rx1 = /[a-z]+a[0-9]/g;
+// console.log("awesome undeground awa9".match(rx1));
 
-var rx2 = /[a-z]+a[a-z]+/g;
-console.log("A man can die but once".match(rx2));
-var email = /[a-z0-9]+@([a-z]+[^0-9])\.[a-z]+/g;
-console.log("test@ru.co testjoker@gmail.com test@3ru.co".match(email));
+// const rx2 = /[a-z]+a[a-z]+/g;
+// console.log("A man can die but once".match(rx2));
+// const email = /[a-z0-9]+@([a-z]+[^0-9])\.[a-z]+/g;
+// console.log("test@ru.co testjoker@gmail.com test@3ru.co".match(email));
+
+var link = /http:\/\/[a-z]+\.[a-z]+/g;
+console.log("http://google.com.ua googles.com".match(link)); //
