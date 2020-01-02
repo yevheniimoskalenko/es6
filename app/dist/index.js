@@ -42,7 +42,15 @@
 // });
 // promise.then(res => console.log(res)).catch(res => console.log(res));
 var arr = ["Apple", "Orenge", "peare"];
+var arrs = [1, -3, 5, -2, 10];
+arr.forEach(function (res) {
+  console.log(res);
+});
 var newarr = arr.map(function (res) {
   return res.length;
 });
 console.log(newarr);
+var newars = arrs.filter(function (res) {
+  return res > 0;
+});
+console.log(newars);
