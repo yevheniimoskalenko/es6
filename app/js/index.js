@@ -70,11 +70,16 @@ const number = [1, 2, 3, 4, 5];
 // });
 // for (let r of arr) console.log(r.length);
 // for (let r in arr) console.log(r);
-const arr = [1, 2, 3, 4, 5];
-function getSums(...arr) {
-  const res = arr.reduce((prev, curr) => {
-    return prev + curr;
-  });
-  return res;
-}
-console.log(getSums(1, 2, 3, 4, 5));
+// const arr = [1, 2, 3, 4, 5];
+// function getSums(...arr) {
+//   const res = arr.reduce((prev, curr) => {
+//     return prev + curr;
+//   });
+//   return res;
+// }
+// console.log(getSums(1, 2, 3, 4, 5));
+const rx1 = /[a-z]+a[0-9]/g;
+console.log("awesome undeground awa9".match(rx1));
+
+const rx2 = /[a-z]+a[a-z]+/g;
+console.log("A man can die but once".match(rx2));
