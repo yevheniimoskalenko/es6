@@ -89,6 +89,16 @@ const number = [1, 2, 3, 4, 5];
 // const link = /http:\/\/[a-z]+\.[a-z]+\.[a-z]*/g;
 // console.log("http://google.com.ua googles.com http://google.com".match(link)); //
 
-const numbers = "test1 231".split("");
-console.log(numbers);
-console.log(numbers.join(" ", ":"));
+// const numbers = "test1 231".split("");
+// console.log(numbers);
+// console.log(numbers.join(" ", ":"));
+
+// замыкания
+function createCalcFunction(n) {
+  return function() {
+    console.log(100 * n);
+  };
+}
+
+const calc = createCalcFunction(12);
+calc();
