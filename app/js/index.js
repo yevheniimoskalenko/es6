@@ -86,5 +86,9 @@ const number = [1, 2, 3, 4, 5];
 // const email = /[a-z0-9]+@([a-z]+[^0-9])\.[a-z]+/g;
 // console.log("test@ru.co testjoker@gmail.com test@3ru.co".match(email));
 
-const link = /http:\/\/[a-z]+\.[a-z]+/g;
-console.log("http://google.com.ua googles.com".match(link)); //
+// const link = /http:\/\/[a-z]+\.[a-z]+\.[a-z]*/g;
+// console.log("http://google.com.ua googles.com http://google.com".match(link)); //
+
+const numbers = "test1 231".split("");
+console.log(numbers);
+console.log(numbers.join(" ", ":"));
