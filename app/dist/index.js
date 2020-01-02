@@ -42,6 +42,7 @@
 // });
 // promise.then(res => console.log(res)).catch(res => console.log(res));
 var arr = ["Apple", "Orenge", "peare"];
-arr.forEach(function (result) {
-  console.log(result.length);
+var newarr = arr.map(function (res) {
+  return res.length;
 });
+console.log(newarr);

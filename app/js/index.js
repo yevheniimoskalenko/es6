@@ -40,6 +40,7 @@
 // });
 // promise.then(res => console.log(res)).catch(res => console.log(res));
 const arr = ["Apple", "Orenge", "peare"];
-arr.forEach(result => {
-  console.log(result.length);
+const newarr = arr.map(res => {
+  return res.length;
 });
+console.log(newarr);
