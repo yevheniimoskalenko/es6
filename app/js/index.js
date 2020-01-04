@@ -1,3 +1,4 @@
+const axios = require("axios");
 // // const names = ["Yevhenii", "Vika", "Den", "Vadim"];
 // // for (let name of names) {
 // //   console.log(name);
@@ -40,8 +41,8 @@
 // });
 // promise.then(res => console.log(res)).catch(res => console.log(res));
 // const arr = ["Apple", "Orenge", "peare"];
-const arrs = [1, -3, 5, -2, 10];
-const number = [1, 2, 3, 4, 5];
+// const arrs = [1, -3, 5, -2, 10];
+// const number = [1, 2, 3, 4, 5];
 // arr.forEach(res => {
 //   console.log(res);
 // });
@@ -94,11 +95,77 @@ const number = [1, 2, 3, 4, 5];
 // console.log(numbers.join(" ", ":"));
 
 // замыкания
-function createCalcFunction(n) {
-  return function() {
-    console.log(100 * n);
-  };
-}
+// function create(n) {
+//   return function() {
+//     console.log(n * 2);
+//   };
+// }
+// const result = create(12);
+// // result();
 
-const calc = createCalcFunction(12);
-calc();
+// function calcinc(n) {
+//   return function(num) {
+//     return n + num;
+//   };
+// }
+// const addOne = calcinc(2);
+// console.log(addOne(2));
+
+// function GetUrl(domen) {
+//   return function(url) {
+//     return `http://${domen}.${url}`;
+//   };
+// }
+
+// const url = GetUrl("google");
+// console.log(url("com"));
+
+// function file(type) {
+//   return function(name) {
+//     return `${name}.${type}`;
+//   };
+// }
+// // const files = file("jpg");
+// // console.log(files("test"));
+
+// const person1 = { name: "Yevhenii", age: 22, job: "frontend" };
+// const person2 = { name: "Viktoriy", age: 20, job: "SMM" };
+
+// function bind(context, fn) {
+//   return function(...arg) {
+//     fn.apply(context, arg);
+//   };
+// }
+// function log() {
+//   console.log(`${this.name} ${this.age} ${this.job}`);
+// }
+// bind(person1, log)();
+// bind(person2, log)();
+
+const deley = ms => {
+  return new Promise(r => setTimeout(() => r(), ms));
+};
+const url = "http://jsonplaceholder.typicode.com/comments/";
+// function fetchTodos() {
+//   console.log(`Start`);
+//   return deley(2000).then(() => axios({ method: "GET", url }));
+// }
+
+// fetchTodos()
+//   .then(data => {
+//     console.log(data);
+//   })
+//   .catch(e => console.log(e));
+
+async function axiosn(url) {
+  console.log(`Start`);
+  try {
+    const respons = await axios.get(
+      "http://jsonplaceholder.typicode.com/comments/"
+    );
+    console.log(respons);
+  } catch (e) {
+    console.log(e);
+  }
+}
+axiosn(url);
