@@ -170,19 +170,59 @@ const axios = require("axios");
 // }
 // axiosn();
 
-const person = new Object({
-  name: "Maxim",
-  age: 25,
-  greet: function() {
-    console.log(`gereet`);
-  }
-});
+// const person = new Object({
+//   name: "Maxim",
+//   age: 25,
+//   greet: function() {
+//     console.log(`gereet`);
+//   }
+// });
 
-Object.prototype.Sayhello = function() {
-  console.log(`Hello`);
+// Object.prototype.Sayhello = function() {
+//   console.log(`Hello`);
+// };
+
+// const lena = Object.create(person);
+// lena.name = "lena";
+// lena.age = 20;
+// console.log(lena);
+
+// function hello() {
+//   console.log(`hello`, this);
+// }
+
+const person = {
+  name: "vllade",
+  age: 20,
+  log: function(job, phone) {
+    console.group(`${this.name} info:`);
+    console.log(this.name);
+    console.log(this.age);
+    console.log(job);
+    console.log(phone);
+    console.groupEnd();
+  }
 };
 
-const lena = Object.create(person);
-lena.name = "lena";
-lena.age = 20;
-console.log(lena);
+const lena = {
+  name: "lena",
+  age: 23
+};
+
+// person.log.bind(lena, "Front-end", `380664657082`)();
+// person.log.call(lena, "PM", 38065646);
+// person.log.apply(lena, ["Front-end", `380664657082`]);
+
+const array = [1, 2, 3, 4, 5, 6];
+// function MultBy(arr, n) {
+//   return arr.map(function(i) {
+//     return i * n;
+//   });
+// }
+Array.prototype.MultBy = function(n) {
+  return this.map(function(i) {
+    return i * n;
+  });
+};
+
+console.log(array.MultBy(10));
