@@ -142,10 +142,10 @@ const axios = require("axios");
 // bind(person1, log)();
 // bind(person2, log)();
 
-const deley = ms => {
-  return new Promise(r => setTimeout(() => r(), ms));
-};
-const url = "http://jsonplaceholder.typicode.com/comments/";
+// const deley = ms => {
+//   return new Promise(r => setTimeout(() => r(), ms));
+// };
+// const url = "http://jsonplaceholder.typicode.com/comments/";
 // function fetchTodos() {
 //   console.log(`Start`);
 //   return deley(2000).then(() => axios({ method: "GET", url }));
@@ -157,15 +157,15 @@ const url = "http://jsonplaceholder.typicode.com/comments/";
 //   })
 //   .catch(e => console.log(e));
 
-async function axiosn(url) {
-  console.log(`Start`);
-  try {
-    const respons = await axios.get(
-      "http://jsonplaceholder.typicode.com/comments/"
-    );
-    console.log(respons);
-  } catch (e) {
-    console.log(e);
-  }
-}
-axiosn(url);
+// async function axiosn() {
+//   console.log(`Start`);
+//   try {
+//     const respons = await axios.get(
+//       "http://jsonplaceholder.typicode.com/comments/"
+//     );
+//     console.log(respons);
+//   } catch (e) {
+//     console.log(e);
+//   }
+// }
+// axiosn();

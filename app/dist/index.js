@@ -1,56 +1,5 @@
 "use strict";
 
-// function fetchTodos() {
-//   console.log(`Start`);
-//   return deley(2000).then(() => axios({ method: "GET", url }));
-// }
-
-// fetchTodos()
-//   .then(data => {
-//     console.log(data);
-//   })
-//   .catch(e => console.log(e));
-
-var axiosn = function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(url) {
-    var respons;
-    return regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            console.log("Start");
-            _context.prev = 1;
-            _context.next = 4;
-            return axios.get("http://jsonplaceholder.typicode.com/comments/");
-
-          case 4:
-            respons = _context.sent;
-
-            console.log(respons);
-            _context.next = 11;
-            break;
-
-          case 8:
-            _context.prev = 8;
-            _context.t0 = _context["catch"](1);
-
-            console.log(_context.t0);
-
-          case 11:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee, this, [[1, 8]]);
-  }));
-
-  return function axiosn(_x) {
-    return _ref.apply(this, arguments);
-  };
-}();
-
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
-
 var axios = require("axios");
 // // const names = ["Yevhenii", "Vika", "Den", "Vadim"];
 // // for (let name of names) {
@@ -195,12 +144,30 @@ var axios = require("axios");
 // bind(person1, log)();
 // bind(person2, log)();
 
-var deley = function deley(ms) {
-  return new Promise(function (r) {
-    return setTimeout(function () {
-      return r();
-    }, ms);
-  });
-};
-var url = "http://jsonplaceholder.typicode.com/comments/";
-axiosn(url);
+// const deley = ms => {
+//   return new Promise(r => setTimeout(() => r(), ms));
+// };
+// const url = "http://jsonplaceholder.typicode.com/comments/";
+// function fetchTodos() {
+//   console.log(`Start`);
+//   return deley(2000).then(() => axios({ method: "GET", url }));
+// }
+
+// fetchTodos()
+//   .then(data => {
+//     console.log(data);
+//   })
+//   .catch(e => console.log(e));
+
+// async function axiosn() {
+//   console.log(`Start`);
+//   try {
+//     const respons = await axios.get(
+//       "http://jsonplaceholder.typicode.com/comments/"
+//     );
+//     console.log(respons);
+//   } catch (e) {
+//     console.log(e);
+//   }
+// }
+// axiosn();

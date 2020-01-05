@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "babel app/js -d app/dist --presets env -w"
+    "watch": "babel app/js -d app/dist --presets env -w",
+    "start": "nodemon app/js/index.js"
   },
   "keywords": [],
   "author": "",
