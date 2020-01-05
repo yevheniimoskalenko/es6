@@ -171,3 +171,20 @@ var axios = require("axios");
 //   }
 // }
 // axiosn();
+
+var person = new Object({
+  name: "Maxim",
+  age: 25,
+  greet: function greet() {
+    console.log("gereet");
+  }
+});
+
+Object.prototype.Sayhello = function () {
+  console.log("Hello");
+};
+
+var lena = Object.create(person);
+lena.name = "lena";
+lena.age = 20;
+console.log(lena);
