@@ -193,18 +193,18 @@ var axios = require("axios");
 //   console.log(`hello`, this);
 // }
 
-var person = {
-  name: "vllade",
-  age: 20,
-  log: function log(job, phone) {
-    console.group(this.name + " info:");
-    console.log(this.name);
-    console.log(this.age);
-    console.log(job);
-    console.log(phone);
-    console.groupEnd();
-  }
-};
+// const person = {
+//   name: "vllade",
+//   age: 20,
+//   log: function(...arrs) {
+//     console.group(`${this.name} info:`);
+//     console.log(this.name);
+//     console.log(this.age);
+//     console.log(arrs[0]);
+//     console.log(arrs[1]);
+//     console.groupEnd();
+//   }
+// };
 
 var lena = {
   name: "lena",
@@ -215,16 +215,78 @@ var lena = {
 // person.log.call(lena, "PM", 38065646);
 // person.log.apply(lena, ["Front-end", `380664657082`]);
 
-var array = [1, 2, 3, 4, 5, 6];
-// function MultBy(arr, n) {
-//   return arr.map(function(i) {
-//     return i * n;
-//   });
-// }
-Array.prototype.MultBy = function (n) {
-  return this.map(function (i) {
-    return i * n;
-  });
-};
+// const array = [1, 2, 3, 4, 5, 6];
 
-console.log(array.MultBy(10));
+// Array.prototype.Moult = function(n) {
+//   return this.map(element => {
+//     return element * n;
+//   });
+// };
+// console.log(array.Moult(20));
+
+var person = [{
+  name: "Yevhenii",
+  age: 23,
+  job: "Front-end",
+  budget: 1332
+}, {
+  name: "Viktorya",
+  age: 20,
+  job: "PM",
+  budget: 1854
+}, {
+  name: "Viktorya",
+  age: 14,
+  job: "PM",
+  budget: 5000
+}, {
+  name: "Viktorys",
+  age: 49,
+  job: "PM",
+  budget: 499
+}, {
+  name: "Viktorya",
+  age: 10,
+  job: "PM",
+  budget: 1500
+}];
+
+// for (let s of person) {
+//   console.log(s);
+// }
+// person.forEach(element => {
+//   console.log(element);
+// });
+
+// const result = person.map(element => {
+//   return `${element.name} ${element.age * 2}`;
+// });
+
+// const result = person.filter(element => {
+//   if (element.age >= 18) return true;
+// });
+
+// for (let result of person) {
+//   if (result.age >= 18) {
+//     console.log(result);
+//   }
+// }
+// const adult = [];
+// for (let i = 0; i < person.length; i++) {
+//   if (person[i].age >= 18) {
+//     adult.push(person[i]);
+//   }
+// }
+
+// let amount = person.reduce((total, person) => {
+//   return total + person.budget;
+// }, 0);
+// for (let i = 0; i < person.length; i++) {
+//   amount += person[i].budget;
+// }
+// console.log(amount);
+// const result = person.find(people => people.name === "Viktorys");
+var result = person.findIndex(function (people) {
+  return people.name === "Viktorys";
+});
+console.log(result);

@@ -191,38 +191,104 @@ const axios = require("axios");
 //   console.log(`hello`, this);
 // }
 
-const person = {
-  name: "vllade",
-  age: 20,
-  log: function(job, phone) {
-    console.group(`${this.name} info:`);
-    console.log(this.name);
-    console.log(this.age);
-    console.log(job);
-    console.log(phone);
-    console.groupEnd();
-  }
-};
+// const person = {
+//   name: "vllade",
+//   age: 20,
+//   log: function(...arrs) {
+//     console.group(`${this.name} info:`);
+//     console.log(this.name);
+//     console.log(this.age);
+//     console.log(arrs[0]);
+//     console.log(arrs[1]);
+//     console.groupEnd();
+//   }
+// };
 
-const lena = {
-  name: "lena",
-  age: 23
-};
+// const lena = {
+//   name: "lena",
+//   age: 23
+// };
 
 // person.log.bind(lena, "Front-end", `380664657082`)();
 // person.log.call(lena, "PM", 38065646);
 // person.log.apply(lena, ["Front-end", `380664657082`]);
 
-const array = [1, 2, 3, 4, 5, 6];
-// function MultBy(arr, n) {
-//   return arr.map(function(i) {
-//     return i * n;
-//   });
-// }
-Array.prototype.MultBy = function(n) {
-  return this.map(function(i) {
-    return i * n;
-  });
-};
+// const array = [1, 2, 3, 4, 5, 6];
 
-console.log(array.MultBy(10));
+// Array.prototype.Moult = function(n) {
+//   return this.map(element => {
+//     return element * n;
+//   });
+// };
+// console.log(array.Moult(20));
+
+// const person = [
+//   {
+//     name: "Yevhenii",
+//     age: 23,
+//     job: "Front-end",
+//     budget: 1332
+//   },
+//   {
+//     name: "Viktorya",
+//     age: 20,
+//     job: "PM",
+//     budget: 1854
+//   },
+//   {
+//     name: "Viktorya",
+//     age: 14,
+//     job: "PM",
+//     budget: 5000
+//   },
+//   {
+//     name: "Viktorys",
+//     age: 49,
+//     job: "PM",
+//     budget: 499
+//   },
+//   {
+//     name: "Viktorya",
+//     age: 10,
+//     job: "PM",
+//     budget: 1500
+//   }
+// ];
+
+// for (let s of person) {
+//   console.log(s);
+// }
+// person.forEach(element => {
+//   console.log(element);
+// });
+
+// const result = person.map(element => {
+//   return `${element.name} ${element.age * 2}`;
+// });
+
+// const result = person.filter(element => {
+//   if (element.age >= 18) return true;
+// });
+
+// for (let result of person) {
+//   if (result.age >= 18) {
+//     console.log(result);
+//   }
+// }
+// const adult = [];
+// for (let i = 0; i < person.length; i++) {
+//   if (person[i].age >= 18) {
+//     adult.push(person[i]);
+//   }
+// }
+
+// let amount = person.reduce((total, person) => {
+//   return total + person.budget;
+// }, 0);
+// for (let i = 0; i < person.length; i++) {
+//   amount += person[i].budget;
+// }
+// console.log(amount);
+// const result = person.find(people => people.name === "Viktorys");
+// const result = person.findIndex(people => people.name === "Viktorys");
+// console.log(result);
