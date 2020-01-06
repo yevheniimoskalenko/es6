@@ -1,4 +1,14 @@
-"use strict";
+'use strict';
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var axios = require("axios");
 // // const names = ["Yevhenii", "Vika", "Den", "Vadim"];
@@ -329,3 +339,68 @@ var axios = require("axios");
 //   console.log(person[key])
 // }
 // console.log(person.age)
+
+var Animal = function () {
+  function Animal(option) {
+    _classCallCheck(this, Animal);
+
+    this.name = option.name;
+    this.age = option.age;
+    this.hasTail = option.hasTail;
+  }
+
+  _createClass(Animal, [{
+    key: 'voice',
+    value: function voice() {
+      console.log('I am Animal');
+    }
+  }]);
+
+  return Animal;
+}();
+// const animal = new Animal({
+//   name: 'Animal',
+//   age: 5,
+//   hasTail: true
+// })
+
+
+var Cat = function (_Animal) {
+  _inherits(Cat, _Animal);
+
+  function Cat(option) {
+    _classCallCheck(this, Cat);
+
+    var _this = _possibleConstructorReturn(this, (Cat.__proto__ || Object.getPrototypeOf(Cat)).call(this, option));
+
+    _this.color = option.color;
+    return _this;
+  }
+
+  _createClass(Cat, [{
+    key: 'voice',
+    value: function voice() {
+      _get(Cat.prototype.__proto__ || Object.getPrototypeOf(Cat.prototype), 'voice', this).call(this);
+      console.log('I am cat');
+    }
+  }, {
+    key: 'AgeInfo',
+    get: function get() {
+      return this.age * 7;
+    },
+    set: function set(value) {
+      this.age = value;
+    }
+  }]);
+
+  return Cat;
+}(Animal);
+
+var cat = new Cat({
+  name: 'Animal',
+  age: 5,
+  hasTail: true,
+  color: 'black'
+});
+console.log(cat.AgeInfo = 10);
+console.log(cat.AgeInfo);

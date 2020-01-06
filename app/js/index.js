@@ -327,3 +327,45 @@ const axios = require("axios");
 //   console.log(person[key])
 // }
 // console.log(person.age)
+
+class Animal {
+
+  constructor(option) {
+    this.name = option.name
+    this.age = option.age
+    this.hasTail = option.hasTail
+
+  }
+  voice() {
+    console.log(`I am Animal`)
+  }
+}
+// const animal = new Animal({
+//   name: 'Animal',
+//   age: 5,
+//   hasTail: true
+// })
+class Cat extends Animal {
+  constructor(option) {
+    super(option)
+    this.color = option.color
+  }
+  voice() {
+    super.voice()
+    console.log(`I am cat`)
+  }
+  get AgeInfo() {
+    return this.age * 7
+  }
+  set AgeInfo(value) {
+    this.age = value
+  }
+}
+const cat = new Cat({
+  name: 'Animal',
+  age: 5,
+  hasTail: true,
+  color: 'black'
+})
+console.log(cat.AgeInfo = 10)
+console.log(cat.AgeInfo)
