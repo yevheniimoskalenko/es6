@@ -292,3 +292,38 @@ const axios = require("axios");
 // const result = person.find(people => people.name === "Viktorys");
 // const result = person.findIndex(people => people.name === "Viktorys");
 // console.log(result);
+
+
+// const person = Object.create({
+//   calcAge() {
+//     console.log('Age:', new Date().getFullYear() - this.birthday)
+//   }
+// }, {
+//   name: {
+//     value: "Yevhenii",
+//     enumerable: true,
+//     writable: true,
+//     configurable: true
+//   },
+//   birthday: {
+//     value: 1997,
+//     enumerable: false,
+//     writable: false,
+//     configurable: false
+//   },
+//   age: {
+//     get() {
+//       return new Date().getFullYear() - this.birthday
+//     },
+//     set(value) {
+//       console.log(value)
+//     }
+//   }
+// })
+// person.calcAge()
+// person.age = "test1"
+// person.name = "Maxim"
+// for (let key in person) {
+//   console.log(person[key])
+// }
+// console.log(person.age)

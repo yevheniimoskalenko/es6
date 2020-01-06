@@ -206,10 +206,10 @@ var axios = require("axios");
 //   }
 // };
 
-var lena = {
-  name: "lena",
-  age: 23
-};
+// const lena = {
+//   name: "lena",
+//   age: 23
+// };
 
 // person.log.bind(lena, "Front-end", `380664657082`)();
 // person.log.call(lena, "PM", 38065646);
@@ -224,32 +224,38 @@ var lena = {
 // };
 // console.log(array.Moult(20));
 
-var person = [{
-  name: "Yevhenii",
-  age: 23,
-  job: "Front-end",
-  budget: 1332
-}, {
-  name: "Viktorya",
-  age: 20,
-  job: "PM",
-  budget: 1854
-}, {
-  name: "Viktorya",
-  age: 14,
-  job: "PM",
-  budget: 5000
-}, {
-  name: "Viktorys",
-  age: 49,
-  job: "PM",
-  budget: 499
-}, {
-  name: "Viktorya",
-  age: 10,
-  job: "PM",
-  budget: 1500
-}];
+// const person = [
+//   {
+//     name: "Yevhenii",
+//     age: 23,
+//     job: "Front-end",
+//     budget: 1332
+//   },
+//   {
+//     name: "Viktorya",
+//     age: 20,
+//     job: "PM",
+//     budget: 1854
+//   },
+//   {
+//     name: "Viktorya",
+//     age: 14,
+//     job: "PM",
+//     budget: 5000
+//   },
+//   {
+//     name: "Viktorys",
+//     age: 49,
+//     job: "PM",
+//     budget: 499
+//   },
+//   {
+//     name: "Viktorya",
+//     age: 10,
+//     job: "PM",
+//     budget: 1500
+//   }
+// ];
 
 // for (let s of person) {
 //   console.log(s);
@@ -286,7 +292,40 @@ var person = [{
 // }
 // console.log(amount);
 // const result = person.find(people => people.name === "Viktorys");
-var result = person.findIndex(function (people) {
-  return people.name === "Viktorys";
-});
-console.log(result);
+// const result = person.findIndex(people => people.name === "Viktorys");
+// console.log(result);
+
+
+// const person = Object.create({
+//   calcAge() {
+//     console.log('Age:', new Date().getFullYear() - this.birthday)
+//   }
+// }, {
+//   name: {
+//     value: "Yevhenii",
+//     enumerable: true,
+//     writable: true,
+//     configurable: true
+//   },
+//   birthday: {
+//     value: 1997,
+//     enumerable: false,
+//     writable: false,
+//     configurable: false
+//   },
+//   age: {
+//     get() {
+//       return new Date().getFullYear() - this.birthday
+//     },
+//     set(value) {
+//       console.log(value)
+//     }
+//   }
+// })
+// person.calcAge()
+// person.age = "test1"
+// person.name = "Maxim"
+// for (let key in person) {
+//   console.log(person[key])
+// }
+// console.log(person.age)
