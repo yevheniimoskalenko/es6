@@ -293,7 +293,6 @@ const axios = require("axios");
 // const result = person.findIndex(people => people.name === "Viktorys");
 // console.log(result);
 
-
 // const person = Object.create({
 //   calcAge() {
 //     console.log('Age:', new Date().getFullYear() - this.birthday)
@@ -328,44 +327,118 @@ const axios = require("axios");
 // }
 // console.log(person.age)
 
-class Animal {
+// class Animal {
 
-  constructor(option) {
-    this.name = option.name
-    this.age = option.age
-    this.hasTail = option.hasTail
+//   constructor(option) {
+//     this.name = option.name
+//     this.age = option.age
+//     this.hasTail = option.hasTail
 
-  }
-  voice() {
-    console.log(`I am Animal`)
-  }
-}
-// const animal = new Animal({
+//   }
+//   voice() {
+//     console.log(`I am Animal`)
+//   }
+// }
+// // const animal = new Animal({
+// //   name: 'Animal',
+// //   age: 5,
+// //   hasTail: true
+// // })
+// class Cat extends Animal {
+//   constructor(option) {
+//     super(option)
+//     this.color = option.color
+//   }
+//   voice() {
+//     super.voice()
+//     console.log(`I am cat`)
+//   }
+//   get AgeInfo() {
+//     return this.age * 7
+//   }
+//   set AgeInfo(value) {
+//     this.age = value
+//   }
+// }
+// const cat = new Cat({
 //   name: 'Animal',
 //   age: 5,
-//   hasTail: true
+//   hasTail: true,
+//   color: 'black'
 // })
-class Cat extends Animal {
-  constructor(option) {
-    super(option)
-    this.color = option.color
-  }
-  voice() {
-    super.voice()
-    console.log(`I am cat`)
-  }
-  get AgeInfo() {
-    return this.age * 7
-  }
-  set AgeInfo(value) {
-    this.age = value
-  }
-}
-const cat = new Cat({
-  name: 'Animal',
-  age: 5,
-  hasTail: true,
-  color: 'black'
-})
-console.log(cat.AgeInfo = 10)
-console.log(cat.AgeInfo)
+// console.log(cat.AgeInfo = 10)
+// console.log(cat.AgeInfo)
+// function solution(number) {
+//   for (let i = 0; i < number; i++) {
+//     if (i % 2 && i != 1) console.log(i);
+//   }
+// }
+// solution(10);
+// Создайте программу, которая фильтрует список строк и возвращает список с именем только ваших друзей.
+// Если имя содержит ровно 4 буквы,
+// вы можете быть уверены, что оно должно быть вашим другом!
+//  В противном случае, вы можете быть уверены, что он не ...
+// Ex: (Input = ["Ryan", "Kieran", "Jason", "Yous"]), (Output = ["Ryan", "Yous"]);
+
+// i.e.friend[("Ryan", "Kieran", "Mark")]`shouldBe`[("Ryan", "Mark")];
+
+// function friend(friend) {
+//   if (Array.isArray(friend) === true) {
+//     let friends = [];
+//     for (let key of friend) {
+//       if (key.length === 4) {
+//         friends.push(key);
+//       }
+//     }
+//     return friends;
+//   } else {
+//     console.log("bad");
+//   }
+// }
+// console.log(friend(["Ryan", "Kieran", "Mark"]));
+
+// ((x) => {
+//   return x * x;
+// })
+// console.log((2))
+
+// Исправьте код, указанный ниже, чтобы результат проверки всегда был true,
+// без пропусков, не меняя оператора сравнения и общей логики вычисления
+
+// for (let i = 0; i <= 10; i++) {
+//   console.log(i + ':' + ((i * 0.1) == (i / 10)));
+// }
+// const arr = new Array(1, 2, 3, 4).
+// console.log(arr)
+// const arr = "arras.jpg".split(".", 3)
+// console.log(arr)
+
+// for (let i = 0; i <= 10; i++) {
+//   console.log(i + ':' + ((i * 0.1) == (i / 10)));
+// }
+// Напишите функцию принимающую строку с именем файла и возвращающую
+// расширение (фрагмент после последней точки). В случае отсутствия в
+// строке расширения - выбрасывать исключение.
+
+// function monkeyCount(n) {
+//   let c = [];
+//   for (let i = 1; i <= n; i++) {
+//     c.push(i);
+//   }
+//   return c;
+// }
+// console.log(monkeyCount(10));
+
+//  Ваша задача - написать функцию, которая принимает строку и возвращает новую строку 
+// со всеми удаленными гласными. Например, строка «Этот сайт для неудачников LOL!» 
+// стал бы "Ths wbst s fr lsrs LL!"
+// Примечание: для этого ката у не считается гласным.
+
+
+// a, e, i, o, u, 
+// function disemvowel(str) {
+//   let newstr = str.replace(/[aeiou]/gi, "")
+//   return newstr;
+
+// }
+// console.log(disemvowel("This website is for losers LOL!"))
