@@ -1,4 +1,5 @@
 const axios = require("axios");
+// const split = require("split");
 // // const names = ["Yevhenii", "Vika", "Den", "Vadim"];
 // // for (let name of names) {
 // //   console.log(name);
@@ -429,16 +430,186 @@ const axios = require("axios");
 // }
 // console.log(monkeyCount(10));
 
-//  Ваша задача - написать функцию, которая принимает строку и возвращает новую строку 
-// со всеми удаленными гласными. Например, строка «Этот сайт для неудачников LOL!» 
+//  Ваша задача - написать функцию, которая принимает строку и возвращает новую строку
+// со всеми удаленными гласными. Например, строка «Этот сайт для неудачников LOL!»
 // стал бы "Ths wbst s fr lsrs LL!"
 // Примечание: для этого ката у не считается гласным.
 
-
-// a, e, i, o, u, 
+// a, e, i, o, u,
 // function disemvowel(str) {
-//   let newstr = str.replace(/[aeiou]/gi, "")
+//   let newstr = str.replace(/[aeiou]/gi, "");
 //   return newstr;
-
 // }
-// console.log(disemvowel("This website is for losers LOL!"))
+// console.log(disemvowel("This website is for losers LOL!"));
+
+// function factorial(n) {
+//   if (n == 1) return 1;
+//   else
+//    return n * factorial(n - 1);
+// }
+// console.log(factorial(5));
+// Ваша задача - создать функцию, которая может принимать любое
+//  неотрицательное целое число в качестве аргумента и возвращать
+//  его с его цифрами в порядке убывания. По сути,
+//  переставить цифры, чтобы создать максимально возможное число.
+// function descendingOrder(n) {
+//   let newnum = n.split("");
+//   newnum.sort((a, b) => b - a);
+//   let s = newnum.join("");
+//   return s;
+// }
+// console.log(descendingOrder("123242"));
+
+// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+
+// If the function is passed a valid PIN string, return true, else return false.
+// function validatePIN(pin) {
+//   var myRe = /^\d+\w/gi;
+//   var myArray = myRe.test(pin);
+//   if (myArray == true) {
+//     if (pin.length == 4 || pin.length == 6) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   } else {
+//     return false;
+//   }
+// }
+// console.log(validatePIN("432432"));
+
+// const arr = [1, 4, 2, 232, 4, 1, 22, 64, 3, 1003];
+// const sortBulb = data => {
+//   for (let i = data.length; i > 0; i--) {
+//     var counter = 0;
+//     for (let j = 0; j < i; j++) {
+//       if (data[j] > data[j + 1]) {
+//         let tmp = data[j];
+//         data[j] = data[j + 1];
+//         data[j + 1] = tmp;
+//         counter++;
+//       }
+//     }
+//     if (counter == 0) {
+//       break;
+//     }
+//   }
+//   return data;
+// };
+// console.log(sortBulb(arr));
+// function removeSmallest(numbers) {
+//   return numbers;
+// }
+// console.log(removeSmallest([5, 3, 2, 4]));
+// function removeSmallest(obj) {
+//   const e = Math.min.apply(Math, obj);
+//   obj.splice(obj.indexOf(e), 1);
+
+//   return obj;
+// }
+
+// console.log(removeSmallest([5, 3, 2, 4]));
+
+// Array.prototype.match = function(...arg) {
+//   // return arg * 2;
+//   console.log(arg);
+// };
+// const fruits = [1, 2, 3, 4];
+// console.log(fruits.match(1, 2, 3));
+
+// Можете ли вы найти иголку в стоге сена? Напишите функцию findNeedle (),
+// которая принимает массив, полный мусора, но содержащий одну «иглу» После того,
+// как ваша функция найдет стрелку, она должна вернуть сообщение (в виде строки),
+//  которое говорит: «нашел иглу в положении» плюс индекс, в котором он нашел иглу, так что:
+
+// function findNeedle(haystack) {
+//   const str = haystack.indexOf("needle");
+//   return `found the needle at position ${str}`;
+// }
+
+// console.log(
+//   findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"])
+// );
+// Напишите функцию с именем repeatString, которая повторяет данный String src точное количество раз.
+// function repeatStr(n, s) {
+//   const newstr = s.repeat(n);
+//   return newstr;
+// }
+
+// console.log(repeatStr(10, "Hello"));
+// Нам нужна функция, которая может преобразовать число в строку.
+//  Какие способы достижения этого вы знаете?
+
+// function numberToString(num) {
+//   return String(num);
+// }
+// console.log(numberToString(999));
+
+// Дано: массив, содержащий хэши имен Возврат: строка,
+//  отформатированная в виде списка имен, разделенных запятыми,
+//  за исключением двух последних имен, которые должны быть разделены амперсандом.
+
+// function list(names) {
+//   // return names.length-1;
+//   let string = [];
+
+//   for (let element of names) {
+//     string.push(element.name);
+//   }
+//   console.log(string);
+// }
+
+// console.log(list([{ name: "Bart" }, { name: "Lisa" }, { name: "Maggie" }]));
+
+// function countSheeps(arrayOfSheep) {
+//   let trues = [];
+//   for (let key of arrayOfSheep) {
+//     if (key === true) {
+//       trues.push(key);
+//     }
+//   }
+//   return trues.length;
+//   // TODO May the force be with you
+// }
+// console.log(
+//   countSheeps([
+//     true,
+//     true,
+//     true,
+//     false,
+//     true,
+//     true,
+//     true,
+//     true,
+//     true,
+//     false,
+//     true,
+//     false,
+//     true,
+//     false,
+//     false,
+//     true,
+//     true,
+//     true,
+//     true,
+//     true,
+//     false,
+//     false,
+//     true,
+//     true
+//   ])
+// );
+
+// В этом небольшом задании вам дана строка чисел,
+// разделенных пробелами, и вы должны вернуть самое высокое и самое низкое число.
+// function highAndLow(numbers) {
+//   let nameList = numbers.split(" ");
+//   let newLists = nameList.map(element => {
+//     return Number(element);
+//   });
+//   let min = Math.min.apply(null, newLists);
+//   let max = Math.max.apply(null, newLists);
+
+//   return `${max} ${min}`;
+// }
+// console.log(highAndLow("1 2 3 4 5"));
