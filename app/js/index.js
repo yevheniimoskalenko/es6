@@ -613,3 +613,29 @@ const axios = require("axios");
 //   return `${max} ${min}`;
 // }
 // console.log(highAndLow("1 2 3 4 5"));
+
+// Простой, учитывая строку слов, возвращает длину самого короткого слова.
+//  Строка никогда не будет пустой, и вам не нужно учитывать разные типы данных.
+
+// function findShort(s) {
+//   const list = s.split(" ");
+//   const length = list.map(element => {
+//     return element.length;
+//   });
+//   const min = Math.min.apply(null, length);
+//   return min;
+// }
+// console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
+
+// Ваша задача - написать функцию findSum.
+// Вплоть до n эта функция будет возвращать сумму всех кратных 3 и 5.
+// function findSum(n) {
+//   let s = 0;
+//   for (let i = 1; i < n; i++) {
+//     if (i % 3 == 0 || i % 5 == 0) {
+//       s += i;
+//     }
+//   }
+//   return s + n;
+// }
+// console.log(findSum(10));
