@@ -464,10 +464,10 @@ const axios = require("axios");
 
 // If the function is passed a valid PIN string, return true, else return false.
 // function validatePIN(pin) {
-//   var myRe = /^\d+\w/gi;
+//   var myRe = /^[0-9]*$/gi;
 //   var myArray = myRe.test(pin);
-//   if (myArray == true) {
-//     if (pin.length == 4 || pin.length == 6) {
+//   if (myArray === true) {
+//     if (pin.length === 4 || pin.length === 6) {
 //       return true;
 //     } else {
 //       return false;
@@ -476,7 +476,7 @@ const axios = require("axios");
 //     return false;
 //   }
 // }
-// console.log(validatePIN("432432"));
+// console.log(validatePIN("1234"));
 
 // const arr = [1, 4, 2, 232, 4, 1, 22, 64, 3, 1003];
 // const sortBulb = data => {
@@ -639,3 +639,71 @@ const axios = require("axios");
 //   return s + n;
 // }
 // console.log(findSum(10));
+
+// Напишите функцию, которая принимает массив строк в качестве аргумента и возвращает отсортированный массив,
+// содержащий те же строки, упорядоченные от самой короткой до самой длинной.
+// Например, если этот массив был передан в качестве аргумента:
+// ["Telescopes", "Glasses", "Eyes", "Monocles"]
+// Ваша функция вернет следующий массив:
+// ["Eyes", "Glasses", "Monocles", "Telescopes"]
+// Все строки в массиве, передаваемые вашей функции,
+// будут иметь разную длину,
+//  поэтому вам не придется решать,
+// как упорядочить несколько строк одинаковой длины.
+
+// function sortByLength(array) {
+//   return array.sort();
+// }
+// console.log(sortByLength(["Telescopes", "Glasses", "Eyes", "Monocles"]));
+
+// function stringAs(str) {
+//   let newstr;
+//   if (str.length <= 70) {
+//     newstr = str.split(" ");
+//   } else {
+//     console.log(`false`);
+//   }
+//   let list = [];
+//   for (let key of newstr) {
+//     if (/^[aA]/i.test(key) === true) {
+//       list.push(key);
+//     }
+//   }
+//   return list;
+// }
+// console.log(
+//   stringAs(
+//     "aywdkadl dlawndlwad Akalhd awkhd wiakdhodkuwadklhj ladjwaiod ha doi w"
+//   )
+// );
+
+// У вас есть массив чисел.
+//  Ваша задача сортировать возрастающие нечетные числа,
+//  но четные числа должны быть на своих местах.
+//  Ноль не является странным числом,
+//  и вам не нужно его перемещать.
+//   Если у вас есть пустой массив,
+// вам нужно его вернуть.
+// function sortArray(array) {
+// let sors = array.sort((a, b) => a - b);
+//   const list = [];
+//   for (let key of array) {
+//     if (key % 2 == 0) {
+//       console.log(key);
+//     }
+//   }
+// return sors;
+// }
+// console.log(sortArray([5, 3, 1.2, 2, 8, 1, 4]));
+// Вернуть количество (количество) гласных в данной строке.
+//  Мы будем рассматривать a, e, i, o и u как гласные для этого ката.
+//  Входная строка будет состоять только из строчных букв и / или пробелов.
+function getCount(str) {
+  //   aeiou
+  // enter your majic here
+  let newstr = str.replace(/[aeiou]/gi, "");
+
+  return str.length - newstr.length;
+}
+// хаха вот это ришение так ришение
+console.log(getCount("abracadabra"));
