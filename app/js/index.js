@@ -711,12 +711,21 @@ const axios = require("axios");
 // Есть массив с некоторыми числами.
 //  Все числа равны, кроме одного.
 //  Попробуйте найти это!
-function findUniq(arr) {
-  arr.sort();
-  if (arr[0] === arr[1]) {
-    return arr[arr.length - 1];
-  } else {
-    return arr[0];
-  }
-}
-console.log(findUniq([1, 1, 1, 2, 1, 1]));
+// function findUniq(arr) {
+//   arr.sort();
+//   if (arr[0] === arr[1]) {
+//     return arr[arr.length - 1];
+//   } else {
+//     return arr[0];
+//   }
+// }
+// console.log(findUniq([1, 1, 1, 2, 1, 1]));
+
+// Напишите функцию, которая принимает массив из 10 целых чисел (от 0 до 9),
+//  который возвращает строку этих чисел в виде номера телефона.
+// function createPhoneNumber(numbers) {
+//   let num = numbers.join("");
+//   let number = `(${num.slice(0, 3)}) ${num.slice(3, 6)}-${num.slice(6, 10)}`;
+//   return number;
+// }
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
