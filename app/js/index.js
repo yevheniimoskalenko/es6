@@ -698,12 +698,25 @@ const axios = require("axios");
 // Вернуть количество (количество) гласных в данной строке.
 //  Мы будем рассматривать a, e, i, o и u как гласные для этого ката.
 //  Входная строка будет состоять только из строчных букв и / или пробелов.
-function getCount(str) {
-  //   aeiou
-  // enter your majic here
-  let newstr = str.replace(/[aeiou]/gi, "");
+// function getCount(str) {
+//   //   aeiou
+//   // enter your majic here
+//   let newstr = str.replace(/[aeiou]/gi, "");
 
-  return str.length - newstr.length;
+//   return str.length - newstr.length;
+// }
+// // хаха вот это ришение так ришение
+// console.log(getCount("abracadabra"));
+
+// Есть массив с некоторыми числами.
+//  Все числа равны, кроме одного.
+//  Попробуйте найти это!
+function findUniq(arr) {
+  arr.sort();
+  if (arr[0] === arr[1]) {
+    return arr[arr.length - 1];
+  } else {
+    return arr[0];
+  }
 }
-// хаха вот это ришение так ришение
-console.log(getCount("abracadabra"));
+console.log(findUniq([1, 1, 1, 2, 1, 1]));
