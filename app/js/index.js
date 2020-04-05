@@ -729,3 +729,512 @@ const axios = require("axios");
 //   return number;
 // }
 // console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+
+// Ваша задача - отсортировать заданную строку.
+//  Каждое слово в строке будет содержать одно число.
+//   Это число - позиция, которую слово должно занимать в результате.
+//    Примечание: числа могут быть от 1 до 9. Таким образом, 1 будет первым словом (не 0).
+//  Если входная строка пуста, вернуть пустую строку.
+//  Слова во входной строке будут содержать только действительные последовательные числа.
+// function order(words) {
+//   const arr = words.split(" ");
+//   let list = [];
+//   let numArr = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+//   for (let i = 0; i < numArr.length; i++) {
+//     for (let j = 0; j < arr.length; j++) {
+//       if (arr[j].includes(numArr[i])) {
+//         list.push(arr[j]);
+//       }
+//     }
+//   }
+//   return list.join(" ");
+// }
+
+// console.log(order("is2 Thi1s T4est 3a"));
+// Я новичок в кодировании, и теперь я хочу получить сумму двух массивов ... фактически сумму всех их элементов. Я буду признателен за вашу помощь. Постскриптум Каждый массив содержит только целые числа. Выход тоже число.
+// function arrayPlusArray(arr1, arr2) {
+//   let num = arr1.concat(arr2);
+//   let sum = 0;
+//   for (let elem of num) {
+//     sum += elem;
+//   }
+//   return sum;
+// }
+// console.log(arrayPlusArray([1, 2, 3], [4, 5, 6]));
+// function array_diffB(a, b) {
+//   return a.filter(function(num) {
+//     return b.indexOf(num) === -1;
+//   });
+// }
+
+// console.log(array_diffB([1, 2, 2, 2, 3], [2, 3]));
+// function oddOrEven(array) {
+//   if (array == [] || array == undefined) return "even";
+//   for (let elem of array) {
+//     if (elem % 2 === 0) {
+//       console.log(elem);
+//       return "even";
+//     } else {
+//       return "odd";
+//     }
+//   }
+// }
+
+// console.log(oddOrEven([1023, 1, 3]));
+// function findLongest(str) {
+//   var spl = str.split(" ");
+//   var longest = 0;
+
+//   for (var i = 0; i < spl.length; i++) {
+//     if (spl[i].length > longest) {
+//       longest = spl[i].length;
+//     }
+//   }
+//   return longest;
+// }
+// console.log(findLongest("The quick white fox jumped around the massive dog"));
+
+// function getGrade(s1, s2, s3) {
+//   let Num = (s1 + s2 + s3) / 3;
+//   if (Num >= 90 || Num >= 100) return "A";
+
+//   if (Num >= 80 || Num >= 90) return "B";
+
+//   if (Num >= 70 || Num >= 80) return "C";
+
+//   if (Num >= 60 || Num >= 70) return "D";
+
+//   if (Num >= 0 || Num >= 60) return "F";
+// }
+// console.log(getGrade(50, 50, 50));
+// function removeChar(str) {
+//   let text = str.substr(1, str.length - 2)
+//   return text
+// };
+// console.log(removeChar("eloquent"))
+
+// function makeUpperCase(str) {
+//   return str.toUpperCase()
+// }
+// console.log(makeUpperCase("eloquent"))
+// function boolToWord(bool) {
+//   if (!!bool === true) {
+//     return "Yes"
+//   } else {
+//     return "No"
+//   }
+// }
+// console.log(boolToWord(true))
+
+// function reverseWords(str) {
+//   let strs = str.split(" ").reverse().join(" ")
+//   return strs;
+// }
+// console.log(reverseWords("The greatest victory is that which requires no battle"))
+// function booleanToString(b) {
+//   if (!!b === true) return "true"
+//   else return "false"
+// }
+// console.log(booleanToString(false))
+
+// function reverseList(list) {
+//   return list.reverse()
+// }
+// console.log(reverseList([1, 2, 3, 4]))
+
+// возьмите массив и удалите каждый второй элемент из этого массива. Всегда оставляйте первый элемент и начинайте удаление со следующего элемента.
+// function removeEveryOther(arr) {
+//   let list = []
+//   for (let i = 0; i < arr.length; i += 2) {
+//     list.push(arr[i])
+//   }
+//   return list
+// }
+// console.log(removeEveryOther(['Keep', 'Remove', 'Keep', 'Remove', 'Keep']))
+
+// Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
+
+// Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
+// function hello(name) {
+//   let lowCase = name.toLowerCase()
+//   let s = lowCase[0].toUpperCase() + lowCase.slice(1)
+//   return `Hello ${s}`
+// }
+// console.log(hello("johN"))
+// function spacify(str) {
+//   list = ""
+//   for (let i = 0; i < str.length; i++) {
+//     list += `${str[i]} `
+//   }
+//   return list.substr(0, list.length - 1)
+
+// }
+// console.log(spacify("hello world"))
+// var add = n => {
+//   const f = x => add(n + x);
+//   f.valueOf = () => {
+//     return n;
+//   };
+//   return f;
+// };
+
+// console.log(add(2)(5)(12).valueOf());
+
+// function spinWords(str) {
+//   return str
+//     .split(" ")
+//     .map(function(word) {
+//       return word.length > 4 ? word.reverse() : word;
+//     })
+//     .join(" ");
+// }
+
+// String.prototype.reverse = function() {
+//   return this.split("")
+//     .reverse()
+//     .join("");
+// };
+// console.log(spinWords("Hey fellow warriors"));
+
+// let arr = {
+//   sum: [1, 2, 3, 4],
+//   mess: function() {
+//     let s = this.sum.map(elem => {
+//       return elem + 2;
+//     });
+//     console.log(s);
+//   }
+// };
+// arr.mess();
+
+// function absentVowel(x) {
+//   let newstr = x.replace(/[^aeiou]/gi, "").split("");
+//   let vowel = {
+//     0: "a",
+//     1: "e",
+//     2: "i",
+//     3: "o",
+//     4: "u"
+//   };
+//   let list = "";
+//   for (let i = 0; i < 5; i++) {
+//     if (newstr.includes(vowel[i]) === false) {
+//       list = i;
+//     }
+//   }
+//   return Number.parseInt(list);
+// }
+// console.log(absentVowel("John Doe hs seven red pples under his bsket"));
+// function isIntArray(arr) {
+//   let list = "";
+//   console.log(arr)
+//   if (Array.isArray(arr) == true) {
+//     list = true;
+//   }
+
+//   if (arr === null || arr === undefined) {
+//     list = false
+//   }
+
+//   if (arr !== null && Number.isNaN(NaN) !== false && arr !== undefined) {
+//     for (let elem of arr) {
+//       if (Number.isInteger(elem) === false) {
+//         list = !!elem;
+//       } else {
+//         list = !!elem;
+//       }
+//     }
+//   }
+//   return list;
+// }
+
+// function isIntArray(arr) {
+
+//   if (!arr || Object.prototype.toString.call(arr) != "[object Array]") return false;
+//   var el;
+
+//   for (var i = 0; i < arr.length; i++) {
+
+//     if (Number(el = arr[i]) !== el || el % 1 !== 0) {
+//       return false
+//     }
+//   }
+//   return true
+// }
+
+// function isIntArray(arr) {
+//   return Array.isArray(arr) && arr.every(function (x) {
+//     return Math.floor(x) === x
+//   });
+// }
+// console.log(isIntArray([]));
+
+// function between(a, b) {
+//   let list = [];
+//   for (let i = a; i <= b; i++) {
+//     list.push(i);
+//   }
+//   return list;
+// }
+// console.log(between(5, 10));
+// // Сравнение
+// console.log("3" > "22");
+// ucFirst("вася") == "Вася";
+// const ucFirst = str => {
+//   return str[0].toUpperCase() + str.substr(1);
+// };
+
+// console.log(ucFirst("вася"));
+
+// const checkSpam = str => {
+//   let newstr = str.toLowerCase();
+//   // if (newstr.includes("viagra") == true || newstr.includes("xxx") == true) {
+//   //   return true;
+//   // } else {
+//   //   return false;
+//   // }
+//   return newstr.includes("viagra") || newstr.includes("xxx");
+// };
+// console.log(checkSpam("innocent rabbit"));
+
+// const truncate = (str, maxlength) => {
+//   return str.length > maxlength ? str.slice(0, maxlength - 1) + "..." : str;
+// };
+// console.log(truncate("Всем привет!", 20));
+// const extractCurrencyValue = str => {
+//   return str.slice(1);
+// };
+
+// console.log(extractCurrencyValue("$120"));
+// class Clock {
+//   constructor({
+//     template
+//   }) {
+//     this.template = template;
+//   }
+//   render() {
+//     let date = new Date();
+
+//     let hours = date.getHours();
+//     if (hours < 10) hours = "0" + hours;
+
+//     let mins = date.getMinutes();
+//     if (mins < 10) mins = "0" + mins;
+
+//     let secs = date.getSeconds();
+//     if (secs < 10) secs = "0" + secs;
+//     let output = this.template
+//       .replace("h", hours)
+//       .replace("m", mins)
+//       .replace("s", secs);
+
+//     console.log(output);
+//   }
+//   stop() {
+//     clearInterval(this.timer);
+//   }
+//   start() {
+//     this.render();
+//     this.timer = setInterval(() => this.render(), 1000);
+//   }
+// }
+
+// let clock = new Clock({
+//   template: "h:m:s"
+// });
+// clock.start();
+// clock.stop();
+
+// function solution(str) {
+//   // let strs = str.split("")
+//   let list = []
+//   const re = /(.{2}|.)/g
+
+//   if (str.length % 2 === 0) {
+//     list = str.match(re)
+//   } else {
+//     list = str.match(re)
+//     let last = list[list.length - 1] + "_"
+//     list.splice(list.length - 1, list.length - 1, `${str[str.length-1]}_`);
+//   }
+//   return list
+// }
+
+// // function solution(str) {
+// //   return (str.length % 2 ? str + '_' : str).match(/../g);
+// // }
+// console.log(solution("abc1d"))
+
+// function reverse(str) {
+//   str = str.split(" ");
+//   for (let i = 0; i < str.length; i++) {
+//     if (i % 2) {
+//       str[i] = str[i]
+//         .split("")
+//         .reverse()
+//         .join("");
+//     }
+//   }
+//   return str.join(" ").trim();
+// }
+
+// console.log(reverse("   "));
+// function solution(str) {
+//   return str
+//     .split("")
+//     .reverse()
+//     .join("");
+// }
+// console.log(solution("world"));
+// function sumMix(x) {
+//   let sum = 0;
+//   for (let key of x) {
+//     sum += +key;
+//   }
+//   return sum;
+// }
+// console.log(sumMix([9, 3, "7", "3"]));
+// function noSpace(x) {
+//   return x.replace(/ /g, "");
+// }
+// console.log(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"));
+// function nthChar(words) {
+//   let str = [];
+//   for (let key in words) {
+//     str.push(words[key][key]);
+//   }
+//   return str.join("");
+// }
+// console.log(nthChar(["yoda", "best", "has"]));
+
+// function removeUrlAnchor(url) {
+//   var to = url.search("#");
+//   if (to == "-1") {
+//     return url;
+//   }
+
+//   let s = url.substring(0, to);
+//   return s;
+// }
+// function removeUrlAnchor(url) {
+//   return url.split("#")[0];
+//   // return url.replace(/#.+/gi, "");
+// }
+// console.log(removeUrlAnchor("www.codewars.com/katas/"));
+// function digitize(n) {
+//   let rev = n
+//     .toString()
+//     .split("")
+//     .reverse()
+//     .map(elem => {
+//       return Number(elem);
+//     });
+//   return rev;
+// }
+// console.log(digitize(348597));
+
+// function maps(x) {
+//   return x.map(elem => {
+//     return elem * 2;
+//   });
+// }
+// console.log(maps([1, 2, 3]));
+// function NameMe(first, last) {
+//   this.firstName = first;
+//   this.lastName = last;
+//   return ` ${this.firstName} this.lastName `;
+// }
+
+// var n = new NameMe("John", "Doe");
+// console.log(n);
+
+// const arr = [1, 2, 3, 4, 56, 6];
+
+// console.log(s);
+
+function hello() {
+    console.log("hello", this);
+}
+
+const person = {
+    name: "Vladilen",
+    age: 25,
+    Sayhello: hello,
+    loginfo: function (job, work) {
+        console.log(`${this.name}`);
+        console.log(`${job}`);
+        console.log(`${work}`);
+    }
+};
+
+const lena = {
+    name: "lena",
+    age: 22
+};
+
+// person.loginfo.apply(lena, ["wadwa", "Awdaw"]);
+// person.loginfo.call(lena, "wadwa", "Awdaw");
+// person.loginfo.bind(lena, "wadwa", "Awdaw");
+// const arr = [1, 23, 5, 3, 54, 12];
+// Array.prototype.moynt = function(n) {
+//   return this.map(elem => elem * n);
+// };
+// // console.log(arr.moynt(2));
+// const func = (job, number) => {
+//     console.log(`${this.name} ${this.age}`);
+//     console.log(`${job} ${number}`);
+// };
+// func.call(lena, "Front-end", "543534");
+// async function wait() {
+//     await new Promise(resolve => setTimeout(resolve, 1000));
+
+//     return 10;
+// }
+function func(job, number) {
+    console.log(`${this.name} ${this.age}`);
+    console.log(`${job} ${number}`);
+};
+
+
+func.call(lena, "Front-end", "543534");
+async function wait() {
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    return 10;
+}
+// function f() {
+//   wait().then(res => console.log(res));
+// ...что здесь написать?
+// чтобы вызвать wait() и дождаться результата "10" от async–функции
+// не забывайте, здесь нельзя использовать "await"
+// }
+
+// f();
+// let a = [1, 2, 3, 4, 6];
+// let b = a.concat();
+// b.push(5)
+// console.log(a)
+// console.log(b)
+// console.log(1 + "2" + "2")
+// console.log(1 + +"2" + "2")
+// console.log(1 + -"2" + "2")
+// console.log(+"1" + "2" + "2")
+// console.log("A" + "B" + "2")
+// console.log("A" - "B" + 2)
+
+
+// var x = 21;
+// var girl = function () {
+//     console.log(x)
+// }
+// girl()
+
+
+// function monkeyCount(n) {
+//     const list = []
+//     for (let i = 1; i <= n; i++) {
+//         list.push(i)
+//     }
+//     return list
+// }
+// console.log(monkeyCount(10))
