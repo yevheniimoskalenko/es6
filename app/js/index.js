@@ -1282,3 +1282,9 @@ const person = {
 //     adress: { city: homeTawn = 'not faund', country }
 // } = person
 // console.log(homeTawn)
+
+
+function logPerson({ name, age }) {
+    console.log(name, age)
+}
+console.log(logPerson(person))
