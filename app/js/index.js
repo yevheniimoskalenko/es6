@@ -1152,25 +1152,25 @@ const axios = require("axios");
 
 // console.log(s);
 
-function hello() {
-    console.log("hello", this);
-}
+// function hello() {
+//     console.log("hello", this);
+// }
 
-const person = {
-    name: "Vladilen",
-    age: 25,
-    Sayhello: hello,
-    loginfo: function (job, work) {
-        console.log(`${this.name}`);
-        console.log(`${job}`);
-        console.log(`${work}`);
-    }
-};
+// const person = {
+//     name: "Vladilen",
+//     age: 25,
+//     Sayhello: hello,
+//     loginfo: function (job, work) {
+//         console.log(`${this.name}`);
+//         console.log(`${job}`);
+//         console.log(`${work}`);
+//     }
+// };
 
-const lena = {
-    name: "lena",
-    age: 22
-};
+// const lena = {
+//     name: "lena",
+//     age: 22
+// };
 
 // person.loginfo.apply(lena, ["wadwa", "Awdaw"]);
 // person.loginfo.call(lena, "wadwa", "Awdaw");
@@ -1257,14 +1257,28 @@ const lena = {
 
 // console.log(exchangeWith(['1', '2', '3', '4', '5', '6', '7'], ['a', 'b', 'c']))
 
-function calvalues(a, b) {
-    return [
-        a + b,
-        a - b,
-        a * b,
-        a / b
-    ]
-}
-const [sum, sub, mult, ...other] = calvalues(42, 10)
-console.log(sum, sub, sub, other, mult)
+// function calvalues(a, b) {
+//     return [
+//         a + b,
+//         a - b,
+//         a * b,
+//         a / b
+//     ]
+// }
+// const [sum, sub, mult, ...other] = calvalues(42, 10)
+// console.log(sum, sub, sub, other, mult)
 
+
+const person = {
+    name: "yevhenii",
+    age: 20,
+    adress: {
+        country: "Ukraine",
+        city: "Kiev"
+    }
+}
+
+// const { name: firstName, adress, car = "car not found",
+//     adress: { city: homeTawn = 'not faund', country }
+// } = person
+// console.log(homeTawn)
