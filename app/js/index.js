@@ -1190,18 +1190,18 @@ const lena = {
 
 //     return 10;
 // }
-function func(job, number) {
-    console.log(`${this.name} ${this.age}`);
-    console.log(`${job} ${number}`);
-};
+// function func(job, number) {
+//     console.log(`${this.name} ${this.age}`);
+//     console.log(`${job} ${number}`);
+// };
 
 
-func.call(lena, "Front-end", "543534");
-async function wait() {
-    await new Promise(resolve => setTimeout(resolve, 1000));
+// func.call(lena, "Front-end", "543534");
+// async function wait() {
+//     await new Promise(resolve => setTimeout(resolve, 1000));
 
-    return 10;
-}
+//     return 10;
+// }
 // function f() {
 //   wait().then(res => console.log(res));
 // ...что здесь написать?
@@ -1238,3 +1238,33 @@ async function wait() {
 //     return list
 // }
 // console.log(monkeyCount(10))
+
+
+// function exchangeWith(a, b) {
+//     const listA = a.reverse()
+//     const listB = b.reverse()
+//     // const listB = new Map([]);
+//     // const listB = []
+
+//     // for (let i = 0; i < b.length; i++) {
+//     //     listB.push(i, b[i])
+//     // listB.set(i, b[i]);
+
+//     // }
+//     //  a.reverse() 
+//     return `${listA} ${listB}`
+// }
+
+// console.log(exchangeWith(['1', '2', '3', '4', '5', '6', '7'], ['a', 'b', 'c']))
+
+function calvalues(a, b) {
+    return [
+        a + b,
+        a - b,
+        a * b,
+        a / b
+    ]
+}
+const [sum, sub, mult, ...other] = calvalues(42, 10)
+console.log(sum, sub, sub, other, mult)
+
